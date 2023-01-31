@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Produtos EndoCris</title>
+		<link rel="Stylesheet" href="style.css">
+		<link rel="Stylesheet" href="reset.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	</head>
+	<body class="body">
+		<header>
+			<div class="caixa">
+				<img class="logo"src="./images/EC.png">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+        <main>
+                <h1 class="titulo__compras">Parabéns por chegar até aqui!</h1>
+                <p class="paragrafo__compras">Agradecemos pela confiança e escolha de nossos produtos!</p>
+                <p class="paragrafo__compras">Para finalizar a compra, insira os dados abaixo</p>
+                    <form>
+                        <lable class="formlable"for="numero__cartao"> Numero do cartão</lable>
+                        <input class="input-padrao"ctype="text" id="numero__cartao" placeholder="xxxx-xxxx-xxxx-xxxx"required>
+
+                        <lable class="formlable"for="data__vencimento">Data de vencimento</lable>
+                        <input class="input-padrao" type="text" id="data__vencimento" placeholder="xx/xx"required>
+
+                        <lable class="formlable"for="cvv">CVV</lable>
+                        <input class="input-padrao" type="text" id="cvv" placeholder="xxx"required>
+
+                        <lable class="formlable"for="nome__cartao">Nome do cartão</lable>
+                        <input class="input-padrao" type="text" id="nome__cartao">
+                            
+                    </form>
+					<fieldset>
+						<legend class="titulo__parcela">Deseja parcelar? Em quantas vezes?</legend>
+						<select>
+							<option>Não</option>
+							<option>2x</option>
+							<option>3x</option>
+							<option>4x</option>
+							<option>5x</option>
+							<option>6x</option>
+						</select>
+					</fieldset>
+					<input class="enviar"type="submit" value="Enviar dados">
+        </main>
+        <footer>
+			<img class="logofinal"src="./images/EC.png">
+			<p class="copyright">&copy; Copyright EndoCris 2023</p>
+		</footer>
+	</body>	

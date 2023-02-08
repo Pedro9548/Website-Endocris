@@ -1,9 +1,19 @@
 /*CSS página principal*/
+:root {
+	--white: #FFFFFF;
+	--black: #000000;
+	--whiteb: #dafafa;
+	--greenlight: #aaf7f7;
+	--gray: #696969;
+	--graydark: #313131;
+}
 .body{
 	font-family: 'Montserrat', sans-serif;
+	background: var(--bg);
+    color: var(--fontColor);
 }
 header{
-	background: url("./images/background.jpg");
+	background: url("./images/background.jpg")
 }
 .caixa{
 	position: relative;
@@ -26,7 +36,7 @@ nav li{
 }
 nav a{
 	text-transform: uppercase;
-	color: #000000;
+	color: black;
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 25px;
@@ -36,7 +46,19 @@ nav a:hover{
 	text-decoration: underline;
 }
 main {
-	background: #dafafa;
+	background: var(--bg);
+}
+.btn {
+	position: absolute;
+	top: 75px;
+	left: 175px;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	padding: 5px;
+	border: none;
+	color: var(--btnFontColor);
+	background-color: var(--btnBg);
 }
 .foto-principal{
 	width: 100%;
@@ -68,7 +90,7 @@ main {
 }
 .mapa{
 	padding: 3em 0;
-	background: linear-gradient(#dafafa, #69fafa);
+	background: linear-gradient(var(--bg), var(--bgLinear1));
 }
 .mapa p{
 	text-align: center;
@@ -80,7 +102,7 @@ main {
 }
 .beneficios{
 	padding: 3em 0;
-	background: #69fafa;
+	background-color: var(--bgLinear1);
 }
 .conteudo-beneficios{
 	width: 640px;
@@ -110,17 +132,29 @@ main {
 }
 .imagem-beneficios{
 	width: 300px;
-	box-shadow: 10px 10px 5px black;
+	box-shadow: 10px 10px 5px var(--borderColor);
 }
 .video{
 	width: 560px;
 	margin: 2em auto;
 }
-/*CSS página produtos */
-
-.fundo-limas{
-	background: url(./images/fundo-imagens.jpg);
+.light-theme {
+	--fontColor: var(--black);
+	--bg: var(--whiteb);
+	--btnFontColor: var(--white);
+	--btnBg: var(--black);
+	--bgLinear1: var(--greenlight);
+	--borderColor: var(--black);
 }
+.dark-theme {
+	--fontColor: var(--white);
+	--bg: var(--gray);
+	--btnFontColor: var(--white);
+	--btnBg: var(--black);
+	--bgLinear1: var(--graydark);
+	--bgHeader: var(--bgImg);
+}
+/*CSS página produtos */
 .produtos a {
 	color: black;
 	text-decoration: none;
@@ -159,30 +193,62 @@ main {
 	font-size: 35px;
 	font-weight: bold;
 }
-.descrição-produto{
+.descricao-produto{
 	font-size: 18px;
+	margin-top: 1em;
 }
 .foto-lima{
 	width: 250px;
 }
-.formlable{
+.form-field {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column; 
+	width: 100%;
+}
+.form-cont{
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.form-lable-cont {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	margin: 0.5em 0;
+}
+.form-lable{
 	display:block;
 	margin: 0 0 10px;
 	font-size: 20px;
 }
-.input-padrao{
-	display: block;
-	margin: 0 0 20px;
-	width: 25.5%;
-	padding: 10px 25px;
+.input-padrao-cont{
+	margin: 1em auto;
+	width: 100%;
+	padding: 10px 10px;
 	font-size: 20px;
+}
+.titulo-select{
+	margin: 0.5em auto;
+}
+.select-cont {
+	margin: 1em 0;
+}
+.select select{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 15px auto;
 }
 .checkbox{
 	margin: 20px;
 }
 .enviar{
 	display: block;
-	width: 28.5%;
+	width: 100%;
 	background: lightblue;
 	border: none;
 	margin: 15px 0;
@@ -190,7 +256,7 @@ main {
 	border-radius: 5px;
 	transition: 1s all;
 	cursor: pointer;
-	color: white;
+	color: var(--white);
 }
 .enviar:hover{
 	background: darkblue;
@@ -205,7 +271,18 @@ main {
 	font-size: 20px;
 	border: 2px solid #000000;
 	font-weight: bold;
-	color: white;
+	color:	var(--white);
+}
+.p-table{
+	text-align:center;
+	margin: 1em auto;
+	font-size: 20px;
+}
+.table {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1em;
 }
 tbody td{
 	border: 2px solid #000000;
@@ -225,6 +302,35 @@ tbody td{
 	font-size: 20px;
 	margin: 10px 0;
 }
+.form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+}
+.input-padrao{
+	margin: 15px 15px;
+	width: 20%;
+	padding: 10px 25px;
+	font-size: 20px;
+}
+.enviar-comp {
+	display: block;
+	width: 28.5%;
+	background: lightblue;
+	border: none;
+	margin: 15px 0;
+	padding: 15px;
+	border-radius: 5px;
+	transition: 1s all;
+	cursor: pointer;
+	color: var(--white);
+}
+.enviar-comp:hover{
+	background: darkblue;
+	transform: scale(1.2);
+}
 footer{
 	text-align: center;	
 	background: url("./images/background.jpg");
@@ -234,5 +340,6 @@ footer{
 }
 .copyright{
 	padding: 0 0 30px 0;
+	color: black;
 }
 

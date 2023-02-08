@@ -7,38 +7,43 @@
 		<link rel="Stylesheet" href="reset.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	</head>
-	<body class="body">
-		<header>
-			<div class="caixa">
-				<img class="logo"src="./images/EC.png">
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="produtos.html">Produtos</a></li>
-						<li><a href="contato.html">Contato</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-        <main>
-                <h1 class="titulo__compras">Parabéns por chegar até!</h1>
-                <p class="paragrafo__compras">Agradecemos pela confiança e escolha de nossos produtos!</p>
-                <p class="paragrafo__compras">Para finalizar a compra, insira os dados abaixo</p>
-                    <form>
-                        <lable class="formlable"for="numero__cartao"> Numero do cartão</lable>
-                        <input class="input-padrao"ctype="text" id="numero__cartao" placeholder="xxxx-xxxx-xxxx-xxxx"required>
+	<div class="body">
+		<body class="light-theme">
+			<header>
+				<div class="caixa">
+					<img class="logo"src="./images/EC.png">
+					<nav>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="produtos.html">Produtos</a></li>
+							<li><a href="contato.html">Contato</a></li>
+						</ul>
+						<div>
+							<button class="btn">Dark</button>
+						</div>
+					</nav>
+				</div>
+			</header>
+			<main>
+				<h1 class="titulo__compras">Parabéns por chegar até aqui!</h1>
+				<p class="paragrafo__compras">Agradecemos pela confiança e escolha de nossos produtos!</p>
+				<p class="paragrafo__compras">Para finalizar a compra, insira os dados abaixo</p>
+				<div class="form-field">
+					<form class="form">
+						<lable class="form-lable"for="numero__cartao"> Numero do cartão</lable>
+						<input class="input-padrao"ctype="text" id="numero__cartao" placeholder="xxxx-xxxx-xxxx-xxxx"required>
 
-                        <lable class="formlable"for="data__vencimento">Data de vencimento</lable>
-                        <input class="input-padrao" type="text" id="data__vencimento" placeholder="xx/xx"required>
+						<lable class="form-lable"for="data__vencimento">Data de vencimento</lable>
+						<input class="input-padrao" type="text" id="data__vencimento" placeholder="xx/xx"required>
 
-                        <lable class="formlable"for="cvv">CVV</lable>
-                        <input class="input-padrao" type="text" id="cvv" placeholder="xxx"required>
+						<lable class="form-lable"for="cvv">CVV</lable>
+						<input class="input-padrao" type="text" id="cvv" placeholder="xxx"required>
 
-                        <lable class="formlable"for="nome__cartao">Nome do cartão</lable>
-                        <input class="input-padrao" type="text" id="nome__cartao">
-                            
-                    </form>
-					<fieldset>
+						<lable class="form-lable"for="nome__cartao">Nome do cartão</lable>
+						<input class="input-padrao" type="text" id="nome__cartao">
+							
+					</form>
+					<fieldset class="select">
 						<legend class="titulo__parcela">Deseja parcelar? Em quantas vezes?</legend>
 						<select>
 							<option>Não</option>
@@ -49,10 +54,15 @@
 							<option>6x</option>
 						</select>
 					</fieldset>
-					<input class="enviar"type="submit" value="Enviar dados">
-        </main>
-        <footer>
-			<img class="logofinal"src="./images/EC.png">
-			<p class="copyright">&copy; Copyright EndoCris 2023</p>
-		</footer>
-	</body>	
+					<input class="enviar-comp"type="submit" value="Enviar dados">
+				</div>
+			</main>
+			<footer>
+				<img class="logofinal"src="./images/EC.png">
+				<p class="copyright">&copy; Copyright EndoCris 2023</p>
+			</footer>
+		</body>
+		<script src="app.js"></script>
+	</div>
+	
+</html>

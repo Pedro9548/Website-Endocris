@@ -6,74 +6,86 @@
 		<link rel="Stylesheet" href="style.css">
 		<link rel="Stylesheet" href="reset.css">
 	</head>
-	<body class="body">
-		<header>
-			<div class="caixa">
-				<img class="logo"src="./images/EC.png">
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="produtos.html">Produtos</a></li>
-						<li><a href="contato.html">Contato</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<main>
-			<form class="form">
-				<lable class="formlable" for="nomesobrenome">Nome e sobrenome</lable>
-				<input class="input-padrao" type="text" id="nomesobrenome" required>
+	<div class="body">
+		<body class="light-theme">
+			<header>
+				<div class="caixa">
+					<img class="logo"src="./images/EC.png">
+					<nav>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="produtos.html">Produtos</a></li>
+							<li><a href="contato.html">Contato</a></li>
+						</ul>
+						<div>
+							<button class="btn">Dark</button>
+						</div>
+					</nav>
+				</div>
+			</header>
+			<main>
+				<div class="form-field">
+					<form class="form-cont">
+						<lable class="form-lable-cont" for="nomesobrenome">Nome e sobrenome</lable>
+						<input class="input-padrao-cont" type="text" id="nomesobrenome" required>
 
-				<lable class="formlable" for="telefone">Telefone<lable>
-				<input class="input-padrao" type="text" id="telefone" required>
+						<lable class="form-lable-cont" for="telefone">Telefone<lable>
+						<input class="input-padrao-cont" type="text" id="telefone" required>
 
-				<lable class="formlable" for="email">Email</lable>
-				<input class="input-padrao" type="text" id="email" required>
-				<textarea cols="70" rows="10"></textarea>
-				<fieldset>
-					<legend>Como deseja enviar seus dados?</legend>
-					<lable class="formlable" for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked> Whatsapp</lable>
-					<lable class="formlable" for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone"> Telefone</lable>
-					<lable class="formlable" for="radio-email"><input type="radio" name="contato" value="email" id="radio-email"> Email</lable>
-				</fieldset>
-				<fiedset>
-					<legend>Qual horário deseja ser atendido?</legend>
-					<select class="select">
-						<option>Manhã</option>
-						<option>Tarde</option>
-						<option>Noite</option>
-					</select>
-				</fiedset>
-				<lable><input type="checkbox" checked> Deseja receber nossas novidade por email?</lable>
-				<input class="enviar"type="submit" value="Enviar dados">
-			</form>
-			<p>Horário de funcionamento</p>
-			<table>
-				<thead class="cabeçalho">
-					<tr>
-						<th>Dia</th>
-						<th>Horário</th>
-					</tr>
-				</thead>
-				<tbody class="body">
-					<tr>
-						<td>Segunda</td>
-						<td>8h - 18h</td>
-					</tr>
-					<tr>
-						<td>Quarta</td>
-						<td>8h - 18h</td>
-					</tr>
-					<tr>
-						<td>Sexta</td>
-						<td>8 - 17h</td>
-					</tr>
-				</tbody>
-			</table>
-		</main>
-		<footer>
-			<img class="logofinal"src="./images/EC.png">
-			<p class="copyright">&copy; Copyright EndoCris 2023</p>
-		</footer>
-	</body>	
+						<lable class="form-lable-cont" for="email">Email</lable>
+						<input class="input-padrao-cont" type="text" id="email" required>
+
+						<fieldset class="select">
+							<legend class="titulo-select">Como deseja enviar seus dados?</legend>
+							<input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked> Whatsapp</lable><lable class="form-lable-cont" for="radio-whatsapp"></lable>
+							<input type="radio" name="contato" value="telefone" id="radio-telefone"> Telefone</lable><lable class="form-lable-cont" for="radio-telefone"></lable>
+							<input type="radio" name="contato" value="email" id="radio-email"> Email</lable><lable class="form-lable-cont" for="radio-email"></lable>
+						</fieldset>
+						<fiedset>
+							<legend class="titulo-select">Qual horário deseja ser atendido?</legend>
+							<select class="select-cont">
+								<option>Manhã</option>
+								<option>Tarde</option>
+								<option>Noite</option>
+							</select>
+						</fiedset>
+						<div class="input-select">
+							<lable><input type="checkbox" checked> Deseja receber nossas novidade por email?</lable>
+							<input class="enviar"type="submit" value="Enviar dados">
+						</div>
+					</form>
+				</div>
+				<p class="p-table">Horário de funcionamento</p>
+				<div class="table">
+					<table>
+						<thead class="cabeçalho">
+							<tr>
+								<th>Dia</th>
+								<th>Horário</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Segunda</td>
+								<td>8h - 18h</td>
+							</tr>
+							<tr>
+								<td>Quarta</td>
+								<td>8h - 18h</td>
+							</tr>
+							<tr>
+								<td>Sexta</td>
+								<td>8 - 17h</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</main>
+			<footer>
+				<img class="logofinal"src="./images/EC.png">
+				<p class="copyright">&copy; Copyright EndoCris 2023</p>
+			</footer>
+			<script src="app.js"></script>
+		</body>
+	</div>	
 </html>
